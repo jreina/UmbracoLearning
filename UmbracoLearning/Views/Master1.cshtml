@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="/css/site.min.css">
+    <script type="text/javascript" src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.4.2.js"></script>
+</head>
+<body class="home-page">
+    <nav>
+        <ul class="top-level-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/content-page">Content Page</a></li>
+            <li>
+                <a href="/articles">Articles</a>
+                <ul>
+                    <li><a href="/articles/article-one">Article One</a></li>
+                    <li><a href="/articles/article-two">Article Two</a></li>
+                    <li><a href="/articles/article-three">Article Three</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Page 4</a></li>
+        </ul>
+    </nav>
+    <div id="mainContent">@RenderBody()</div>
+    <footer><p>@Umbraco.Field("footerText", altText: "PLACEHOLDER FOOTER TEXT", recursive: true)</p></footer>
+    <script type="text/javascript" src="~/Scripts/Site.min.js"></script>
+</body>
+</html>

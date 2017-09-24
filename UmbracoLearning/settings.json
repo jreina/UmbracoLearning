@@ -1,0 +1,6 @@
+﻿{
+  "less.compile": {
+    "compress": true, // true => remove surplus whitespace
+    "out": false // false => DON'T output .css files (overridable per-file, see below)
+  }
+}
